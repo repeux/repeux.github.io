@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    font-family: "Inter", serif !important;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+a {
+    color: #7886C7 !important;
+    text-decoration: none !important;
+}
+
+a:visited,
+a:hover,
+a:active {
+    color: #7886C7 !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 50px;
+    justify-content: center;
+}
+
+.card:first-child .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 1050px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+@media (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 300px;
+    }
+}
